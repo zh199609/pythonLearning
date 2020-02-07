@@ -1,7 +1,7 @@
 import json
 
 info = {
-    'name': "张磊兰义芝",
+    'name': "张磊",
     "age": 25
 }
 f = open("test.txt", "w", encoding="utf-8")
