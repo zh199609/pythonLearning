@@ -9,6 +9,8 @@ print(a)
 # 生成器   只记住当前位置
 # __next()__方法 获取下一个
 b = (i * 2 for i in range(10))
+print(b)
+print(next(b))
 print(b.__next__())
 print(b.__next__())
 # for i in b:
@@ -36,5 +38,6 @@ def fib(max):
 
 
 fib_gen = fib(10)
+print(fib_gen)
 for i in fib_gen:
     print(i)
