@@ -1,5 +1,4 @@
-import time
-
+from time import sleep
 
 def consumer(name):
     print("%s 准备吃包子啦！" % name)

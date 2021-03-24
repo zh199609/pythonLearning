@@ -1,3 +1,4 @@
+
 print(all([11, 0]))
 print(any([11, 0, "fadf4"]))
 print(bool("sfd"))
@@ -8,6 +9,8 @@ b[0] = 65
 print(b)
 
 print(divmod(10, 2))
+
+
 
 calc = lambda n: print(n)
 calc(2)

@@ -2,12 +2,13 @@ import json
 
 info = {
     'name': "张磊",
-    "age": 25
+    "age": 27
 }
 f = open("test.txt", "w", encoding="utf-8")
 print(str(info))
 # f.write(str(info))
 # 序列化
+print(json.dumps(info))
 f.write(json.dumps(info))
 f.close()
 

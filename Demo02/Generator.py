@@ -41,3 +41,11 @@ fib_gen = fib(10)
 print(fib_gen)
 for i in fib_gen:
     print(i)
+#交换值
+x = 3
+y = 7
+x = x + y
+y = x - y
+x = x - y
+print(x)
+print(y)
