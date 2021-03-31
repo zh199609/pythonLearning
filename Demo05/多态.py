@@ -1,4 +1,6 @@
 class Animal(object):
+    classmethodName = "类方法"
+
     def __init__(self, name):
         self.name = name
 
@@ -8,6 +10,10 @@ class Animal(object):
     @staticmethod
     def animal_talk(obj):
         obj.talk()
+
+    @classmethod
+    def show_name(cls):
+        print(cls.classmethodName)
 
 
 class Cat(Animal):
@@ -27,6 +33,8 @@ m1 = Cat('小猫')
 m1.talk()
 
 Animal.animal_talk(d1)
+
+Animal.show_name()
 
 print(10 / 4)
 
