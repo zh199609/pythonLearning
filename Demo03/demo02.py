@@ -1,0 +1,10 @@
+print(type(1))
+a = 1
+if a:
+    print("true")
+else:
+    print("false")
+
+str = "张磊撒旦佛啊iOS结果i破"
+print(str.encode())
+print(b'\xe5\xbc\xa0\xe7\xa3\x8a\xe6\x92\x92\xe6\x97\xa6\xe4\xbd\x9b\xe5\x95\x8aiOS\xe7\xbb\x93\xe6\x9e\x9ci\xe7\xa0\xb4'.decode())
