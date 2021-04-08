@@ -1,6 +1,7 @@
 import time
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 driver.get("file://D:/BaiduNetdiskDownload/02讲义 笔记 软件/09、UI自动化测试及黑马头条项目实战/UI自动化/UI自动化/web自动化工具集合/pagetest/注册A.html")
@@ -10,5 +11,6 @@ driver.get("file://D:/BaiduNetdiskDownload/02讲义 笔记 软件/09、UI自动�
 <font color=red>如果使用class的属性进行元素定位，需要用
 '''
 driver.find_element_by_xpath("//*[@placeholder='请输入用户名']").send_keys('admin')
+# driver.find_element(By.XPATH, "//*[@placeholder='请输入用户名']").send_keys('admin')
 time.sleep(3)
 driver.quit()
