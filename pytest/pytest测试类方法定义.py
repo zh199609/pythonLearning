@@ -11,6 +11,12 @@ class TestADD:
         print(result)
         assert result == 7
 
+    def setup(self):
+        print("前置处理")
+
+    def teardown(self):
+        print("后置处理")
+
 
 def add(x, y):
     return x + y
