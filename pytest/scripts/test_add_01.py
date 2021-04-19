@@ -43,7 +43,18 @@ class TestAdd:
         result = add(5, 5)
         assert result == 12
 
+
     @pytest.mark.parametrize("x,y,expect", [(7, 7, 14), (8, 8, 16)])
     def test_add_07(self, x, y, expect):
+        """
+
+        Args:
+            x ():
+            y ():
+            expect ():
+
+        Returns:
+
+        """
         result = add(x, y)
         assert result == expect

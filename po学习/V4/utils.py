@@ -14,7 +14,7 @@ class UtilsDriver:
             cls._driver = webdriver.Chrome()
             cls._driver.implicitly_wait(5)
             cls._driver.get("http://localhost")
-        return cls._driver
+        return cls._drivermark.parametrize
 
     @classmethod
     def quit_driver(cls):
