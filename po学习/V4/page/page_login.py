@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 from po学习.V4.utils import UtilsDriver
 
-
+#对象库层
 class LoginPage:
     def __init__(self):
         self.driver = UtilsDriver.get_driver()
@@ -21,7 +21,8 @@ class LoginPage:
     def find_login(self):
         return self.driver.find_element(By.CSS_SELECTOR, ".J-login-submit")
 
-#操作层
+
+# 操作层
 class LoginHandle:
     def __init__(self):
         self.login_page = LoginPage()
@@ -38,13 +39,14 @@ class LoginHandle:
     def click_login(self):
         self.login_page.find_login().click()
 
-#业务层
+
+# 业务层
 class LoginProxy:
     def __init__(self):
         self.driver = LoginHandle()
 
-    def login(self,username,password,code):
+    def login(self, username, password, code):
         self.driver.input_username(username)
-        self.driver.input_username(password)
+        self.driver.input_password(password)
         self.driver.input_code(code)
         self.driver.click_login()
