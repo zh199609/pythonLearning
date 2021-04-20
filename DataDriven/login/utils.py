@@ -17,7 +17,6 @@ class DriverUtil:
         if cls._driver is None:
             cls._driver = webdriver.Chrome()
             cls._driver.implicitly_wait(10)
-            cls._driver.get("http://localhost")
         return cls._driver
 
     @classmethod
