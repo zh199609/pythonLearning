@@ -108,5 +108,6 @@ if __name__ == '__main__':
     homeProxy.go_publish_page()
 
     publishProxy = PublishProxy()
-    publishProxy.publish_article("title", 'content', "ios")
+    publishProxy.publish_article("titleAAA", 'contentAAA', "ios")
+    time.sleep(3)
     UtilsDriver.quit_mp_driver()

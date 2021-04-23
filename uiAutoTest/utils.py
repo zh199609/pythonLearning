@@ -1,3 +1,4 @@
+import json
 import time
 
 from appium import webdriver as app_driver
@@ -16,6 +17,7 @@ class UtilsDriver:
             cls._mp_driver = webdriver.Chrome()
             cls._mp_driver.maximize_window()
             cls._mp_driver.implicitly_wait(30)
+            # cls._mp_driver.get("http://ttmp.research.itcast.cn/")
             cls._mp_driver.get("http://pc-toutiao-python.itheima.net/")
             # cls._mp_driver.get("https://www.baidu.com")
         return cls._mp_driver
@@ -97,3 +99,16 @@ def is_exist(driver, text):
         return driver.find_element(By.XPATH, xpath)
     except Exception as e:
         return False
+
+
+def get_case_data(filename):
+    with open(filename, encoding='utf-8') as f:
+        case_data = json.load(f)
+    list_case_data = []
+    for tiem in case_data.values():
+        list_case_data.append(tuple(tiem.values()))
+    return list_case_data
+
+
+if __name__ == '__main__':
+    print(get_case_data("F:/my/pythonLearning/uiAutoTest/data/mp/test_login_data.json"))

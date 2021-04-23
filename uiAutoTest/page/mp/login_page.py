@@ -1,6 +1,7 @@
 # 自媒体平台的登录页面对象
 import time
 
+import allure
 from selenium.webdriver.common.by import By
 
 from uiAutoTest.base.mp.base import BasePage, BaseHandle
@@ -36,14 +37,17 @@ class LoginHandle(BaseHandle):
         self.login_page = LoginPage()
 
     # 输入手机号码
+    @allure.step(title="输入手机号码")
     def input_mobile(self, text):
         self.input_text(self.login_page.find_mobile(), text)
 
     # 输入验证码
+    @allure.step(title="输入验证码")
     def input_code(self, code):
         self.input_text(self.login_page.find_code(), code)
 
     # 点击登录按钮
+    @allure.step(title="点击登录按钮")
     def click_login_btn(self):
         self.login_page.find_login_btn().click()
 
