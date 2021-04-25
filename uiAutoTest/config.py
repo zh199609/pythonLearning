@@ -4,7 +4,7 @@ import logging.handlers
 
 BaseDir = os.path.dirname(__file__)
 
-
+#allure报告转html
 # allure generate report/ -o report/html --clean
 
 def init_loggin():
