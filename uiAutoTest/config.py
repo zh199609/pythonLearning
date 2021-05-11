@@ -1,10 +1,11 @@
 import logging
-import os
 import logging.handlers
+import os
 
 BaseDir = os.path.dirname(__file__)
 
-#allure报告转html
+
+# allure报告转html
 # allure generate report/ -o report/html --clean
 
 def init_loggin():
@@ -27,3 +28,11 @@ def init_loggin():
     logger.addHandler(fh)
     logger.addHandler(sh)
 
+
+if __name__ == '__main__':
+    data: dict = {'a': 'b'}
+    task_id = 1123
+    logging.getLogger("slave").error(f'终止测试任务 {task_id} -> 未在本机任务列表中！')
+    print(type(data))
+    log_path = './log'
+    print(os.path.isdir(log_path))
