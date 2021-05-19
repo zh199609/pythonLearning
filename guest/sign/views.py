@@ -11,7 +11,7 @@ def index(request):
 
 def login(request):
     if request.method.upper() == 'POST':
-        username = request.get('username','')
-        password = request.get('password','')
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
         print(f'用户名：{username},密码：${password}')
     return HttpResponse('login success!')
