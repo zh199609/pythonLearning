@@ -1,7 +1,7 @@
 import pymysql
 
 
-class DBUtil():
+class DBUtil:
     __conn = None
     __cursor = None
 
@@ -17,7 +17,7 @@ class DBUtil():
     @classmethod
     def __get_cursor(cls):
         if cls.__cursor is None:
-            cls.__cursor = cls.__get_cursor().cursor()
+            cls.__cursor = cls.__get_conn().cursor()
         return cls.__cursor
 
     # 执行sql
@@ -26,7 +26,12 @@ class DBUtil():
         conn = cls.__get_conn()
         cursor = cls.__get_cursor()
         try:
-            pass
+            cursor.execute(sql)
+            if sql.split()[0].lower() == "select":
+                return cursor.fetchall()
+            else:
+                cls.__conn.commit()
+                return cursor.rowcount
         except Exception as e:
             conn.rollback()
             print(e)
@@ -40,7 +45,8 @@ class DBUtil():
             resource.close()
 
 
-
 if __name__ == '__main__':
-    s
-
+    selectSql = "select * from t_book"
+    insertSql = "insert into t_book(id, title, pub_date) values(6, '西游记', '2021- 01-01');"
+    result = DBUtil.exec_sql(selectSql)
+    print(result)
