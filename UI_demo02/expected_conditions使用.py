@@ -11,5 +11,10 @@ print('开始', time.ctime())
 toStationEl = driver.find_element(By.ID,'toStation')
 print(toStationEl.is_displayed())
 print(EC.visibility_of(toStationEl)(driver))
-time.sleep(5)
+time.sleep(1)
+# <input type="text" class="input error" value="" id="toStationText">
+#这个元素是可见的
+print(EC.visibility_of(driver.find_element(By.ID,'toStationText'))(driver))
+print(EC.visibility_of(driver.find_element(By.ID,'toStationText'))(driver).tag_name)
+
 driver.quit()
