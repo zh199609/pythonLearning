@@ -8,7 +8,6 @@ from DataDriven.login.utils import DriverUtil
 
 
 def build_data():
-    test_data = []
     json_data = []
     with open('../login.json', encoding="utf-8") as f:
         test_data = json.load(f)
