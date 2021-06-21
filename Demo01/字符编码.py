@@ -2,7 +2,7 @@ import sys
 
 print(sys.getdefaultencoding())
 
-name = "你好"
+name = "你好A"
 s= name.encode('gbk')
 print(s)
 print(name.encode('utf-8'))

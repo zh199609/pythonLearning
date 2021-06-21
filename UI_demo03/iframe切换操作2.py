@@ -31,4 +31,12 @@ windows = driver.window_handles
 driver.switch_to.window(windows[-1])
 driver.find_element(By.ID, "userB").send_keys("账号B")
 time.sleep(2)
+
+# 切换句柄到首页
+driver.switch_to.window(windows[0])
+driver.find_element(By.ID, 'user').send_keys("user")
+driver.switch_to.frame(driver.find_element(By.ID, 'idframe1'))
+driver.find_element(By.ID, 'userA').send_keys('frame_userA')
+
+time.sleep(2)
 driver.quit()

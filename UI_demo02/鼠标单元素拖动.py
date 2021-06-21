@@ -13,10 +13,12 @@ driver.get("file://%s/验证码/index.html" % base_path)
 action = ActionChains(driver)
 # 验证码拖动
 element = driver.find_element(By.CSS_SELECTOR, '.handler_bg')
+time.sleep(1)
 action.drag_and_drop_by_offset(element, 260, 0)
+action.release()
 # 执行
 action.perform()
-time.sleep(1)
+time.sleep(3)
 print(driver.find_element(By.CSS_SELECTOR, '.drag_text').text)
 time.sleep(2)
 driver.quit()

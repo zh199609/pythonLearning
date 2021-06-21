@@ -1,9 +1,12 @@
+import os
 import time
 
 from selenium import webdriver
 
+base_path = os.path.abspath('..')
 driver = webdriver.Chrome()
-driver.get("file://D:/BaiduNetdiskDownload/02讲义 笔记 软件/09、UI自动化测试及黑马头条项目实战/UI自动化/UI自动化/web自动化工具集合/pagetest/注册A.html")
+print("file://" + base_path + "/注册A.html")
+driver.get("file://" + base_path + "/pagetest/注册A.html")
 '''
 定位一组元素的方法:
 
@@ -17,6 +20,7 @@ find_elements_by_tag_name(tag_name)
 '''
 input_tag_list = driver.find_elements_by_tag_name('input')
 for item in input_tag_list:
+    print(item.location)
     if 'text'.__eq__(item.get_attribute("type")):
         item.send_keys("123456789")
 time.sleep(3)
