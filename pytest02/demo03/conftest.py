@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.fixture(scope="function", autouse=False, params=['成龙', '甄子丹'])
+@pytest.fixture(scope="function", autouse=True, params=['成龙', '甄子丹'])
 def my_fixture(request):
     """
     scope:被@pytest.fixture标记的方法的作用域，function（默认）、class、module、package/session
