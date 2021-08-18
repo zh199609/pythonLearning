@@ -1,5 +1,4 @@
 import pytest
-from lockfile import FileLock
 
 """
 分布式执行测试
@@ -26,7 +25,6 @@ def login():
     token = 'npoi112236'
     yield name, token
     print("==退出登录！==")
-
 
 # @pytest.fixture(scope="session")
 # def login():

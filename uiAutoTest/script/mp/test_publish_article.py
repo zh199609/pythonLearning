@@ -43,3 +43,11 @@ class TestPubliseArticel:
         self.home_proxy.go_publish_page()
         self.publish_proxy.publish_article("测试标题AAA", "测试内容AAA", "ios")
         assert is_exist(UtilsDriver.get_mp_driver(), '新增文章成功')
+
+if __name__ == '__main__':
+    m = [0,1,2,3,4]
+    n= m[:]
+
+    n.remove(1)
+    print(n)
+    print(m)

@@ -9,7 +9,8 @@ from IHRM.app import BASE_DIR
 
 
 def build_data():
-    file_path = BASE_DIR + "/data/login.json"
+    # file_path = BASE_DIR + "/data/login.json"
+    file_path =  "../data/login.json"
     test_data = []
     with open(file_path, encoding="utf-8") as f:
         json_data = json.load(f)
@@ -17,6 +18,8 @@ def build_data():
             test_data.append((item.get('login_data'), item.get("desc")))
     return test_data
 
+if __name__ == '__main__':
+    print("数据：",build_data())
 
 class TestLogin(unittest.TestCase):
     def setUp(self):
