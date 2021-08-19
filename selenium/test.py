@@ -1,3 +1,4 @@
+from pathlib import Path
 from time import sleep
 
 from selenium import webdriver
@@ -14,4 +15,5 @@ search_text.send_keys('小菠萝测试笔记')
 # 提交表单
 search_text.submit()
 sleep(3)
+print(Path.cwd().parent)
 driver.quit()
