@@ -11,8 +11,8 @@ def fun2():
     return 0, 'hello', ['a', 'b', 'c'], {'name', 'age'}
 
 
-# print(fun2())
-# fun1()
+print(fun2())
+fun1()
 
 
 def fun3(x, y):

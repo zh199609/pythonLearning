@@ -6,3 +6,9 @@ logging.debug("debug")
 logging.info("info")
 logging.warning("warning")
 logging.error("error")
+
+try:
+    c = 1 / 0
+except Exception as e:
+    logging.error(e)
+    logging.exception("Exception occurred")

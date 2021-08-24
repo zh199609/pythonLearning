@@ -12,4 +12,16 @@ print(datetime.datetime.now() + datetime.timedelta(days=-3))  # 当前时间-3�
 print(datetime.datetime.now() + datetime.timedelta(hours=3))  # 当前时间-3天
 
 c_time = datetime.datetime.now()
-print(c_time.replace(minute=3,hour=2))#时间替换
+print(c_time.replace(minute=3, hour=2))  # 时间替换
+
+
+def getTodayDate():
+    """
+    datetime.datetime.now().date()有相同效果
+    :return:
+    """
+    todayDate = str(datetime.date.today())
+    return todayDate
+
+print(time.localtime().tm_year)
+
