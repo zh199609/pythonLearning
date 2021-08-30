@@ -32,3 +32,5 @@ class YamlUtil:
             yaml.dump(data, f, Dumper=yaml.SafeDumper)
 
 yamlUtil = YamlUtil()
+
+print(6//4)
