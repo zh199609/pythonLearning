@@ -19,7 +19,7 @@ def read_item(skip: int = 0, limit: int = 0):
     return fake_items_db[skip: skip + limit]
 
 
-# 可选参数
+# 可选参数q
 @app.get("/items2/{item_id}")
 async def read_item(item_id: str, q: Optional[str] = None):
     if q:
